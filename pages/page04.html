@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script type="text/javascript">
+        //1.декларация на променлива
+        var visitorName = '';
+
+        //2.използваме я
+        visitorName = window.prompt('Как се казвате?');
+
+        //3.Проверяваме какво е направил посетителя
+        if( visitorName === null || visitorName === ''){ 
+            visitorName = 'посетител';
+        }
+
+        //4. Извеждаме резултата
+        document.write('<h1>Здравей ' + visitorName + '!</h1>');
+
+    </script>
+</head>
+<body>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <noscript>
+        Dolorum beatae quae, laborum facere ipsam, magnam voluptates numquam eum incidunt consequatur dolor sequi cum, impedit architecto obcaecati voluptate praesentium, optio. Perspiciatis.
+    </noscript>
+</body>
+</html>
