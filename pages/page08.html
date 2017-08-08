@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script type="text/javascript">
+        //1.декларация
+        var messageSuccess;
+
+        function showMessage(text,css){
+            if( typeof text !== 'string'){
+                //window.alert('Missing message');
+                console.log('Missing Messsage');
+                text = 'Default Message';
+            }
+
+            if( typeof css !== 'string'){
+                console.error('Invalid Style');
+                css = 'color:red;font-size:25px';
+            }
+            document.write('<div style="'+css+'">'+text+'</div>');
+        }
+
+        //2. Извикваме функцията
+        showMessage('Успешна регистрация');
+        showMessage( messageSuccess,'color:blue');
+        showMessage('Добавихте продукт ...','background-color:yellow');
+    </script>
+</head>
+<body>
+    
+    <p>
+        Dolorum beatae quae, laborum facere ipsam, magnam voluptates numquam eum incidunt consequatur dolor sequi cum, impedit architecto obcaecati voluptate praesentium, optio. Perspiciatis.
+    </p>
+</body>
+</html>
