@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Page 01</title>
-    <script type="text/javascript">
-        
-    </script>
+
 </head>
 <body>
-    <input type="button" value="Click Me!" onclick="window.alert('Click Event')">
+    
     <p>
         Dolorum beatae quae, laborum facere ipsam, magnam voluptates numquam eum incidunt consequatur dolor sequi cum, impedit architecto obcaecati voluptate praesentium, optio. Perspiciatis.
     </p>
+    <!--- Scripts -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('body').prepend('<h1>Hello jQuery!</h1>');
+        });//on document ready
+    </script>    
 </body>
 </html>

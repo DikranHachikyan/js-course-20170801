@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Page 01</title>
-    <script type="text/javascript">
-        
-    </script>
+    <script>
+        function showMessage(func){
+            document.write('<h1>');
+            func();
+            document.write('</h1>');
+        }
+
+        showMessage( function(){
+            document.write('Hello <span style="color:red">JavaScript</span>');
+        })
+    </script> 
 </head>
 <body>
-    <input type="button" value="Click Me!" onclick="window.alert('Click Event')">
+    
     <p>
         Dolorum beatae quae, laborum facere ipsam, magnam voluptates numquam eum incidunt consequatur dolor sequi cum, impedit architecto obcaecati voluptate praesentium, optio. Perspiciatis.
     </p>
+    <!--- Scripts -->
+    
+       
 </body>
 </html>
