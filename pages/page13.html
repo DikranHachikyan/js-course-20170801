@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi autem, est et iure! <a href="http://dir.bg">Earum</a> perspiciatis alias modi natus ratione quos omnis a iusto veritatis tenetur, nihil reprehenderit beatae optio sit!
+    </div>
+    <div>Dolorum <a href="./page01.html">magnam veritatis</a> laboriosam ratione velit, rem perferendis mollitia ipsam, dicta accusantium quos cum enim doloribus consequuntur, doloremque repudiandae. Vero, pariatur repudiandae.
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ab sint nam, saepe ad <a href="http://dir.bg" title="harum rem debitis">HRD</a> esse quo! Rerum incidunt, quasi aliquam. Amet reiciendis optio facere numquam mollitia itaque.
+    </p>
+    <p>Molestiae atque voluptate a voluptatibus accusantium repudiandae officia, tenetur nesciunt porro ullam deserunt aperiam. Repellat voluptas autem nisi laudantium quos, porro consequatur et quaerat tempora dolorem vitae iusto at minima!
+    </p>
+    <p>Quo hic labore dolorem quibusdam aperiam molestias minus, asperiores voluptatibus cumque totam! Asperiores itaque recusandae facere eaque amet id, modi vitae, consequuntur quia ut veritatis laborum voluptatibus animi dolores. Delectus.
+    </p>
+    <!--- Scripts -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('a[href^="http"]').css('background-color','green');
+            $('a[href^="http"][title]').css('background-color','red');
+            $('a[href$=".html"]').css('background-color','blue');
+        });//on document ready
+    </script>    
+</body>
+</html>

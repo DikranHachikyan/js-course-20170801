@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Me!" id="btn" >
+    <p>
+        Dolorum beatae quae, laborum facere ipsam, magnam voluptates numquam eum incidunt consequatur dolor sequi cum, impedit architecto obcaecati voluptate praesentium, optio. Perspiciatis.
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil labore nulla quibusdam fugit tempore corporis repudiandae animi, corrupti ex inventore eius placeat laudantium adipisci cumque vero, eaque minus, tenetur, veritatis!
+    </p>
+    <p>Necessitatibus dolores eveniet distinctio eius impedit officia illum. Culpa porro atque est deserunt asperiores numquam officia mollitia, nobis fuga laborum quibusdam odit distinctio officiis eos debitis corporis quam nostrum, labore.
+    </p>
+    <label>
+        <input type="checkbox" id="cbx">Съгласен съм ...
+    </label> 
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //1. button
+            $('#btn').on('click', function(evt){
+                window.alert('Click Event');
+            });//on button click
+
+            $('#cbx')
+                .click(function(evt){
+                    window.alert('Click Event');
+                 })//on checkbox click
+                .change(function(evt){
+                    window.alert('Change Event')
+                });//on change event
+
+             $('p').mouseover(function(evt){
+                 $(this).css('background-color','yellow');
+             })//on mouse over
+             .mouseout(function(evt){
+                 $(this).css('background-color','white');
+             })
+        });//on document ready
+    </script>   
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi autem, est et iure! Earum perspiciatis alias modi natus ratione quos omnis a iusto veritatis tenetur, nihil reprehenderit beatae optio sit!
+    </div>
+    <div>Dolorum magnam veritatis laboriosam ratione velit, rem perferendis mollitia ipsam, dicta accusantium quos cum enim doloribus consequuntur, doloremque repudiandae. Vero, pariatur repudiandae.
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ab sint nam, saepe ad harum rem debitis esse quo! Rerum incidunt, quasi aliquam. Amet reiciendis optio facere numquam mollitia itaque.
+    </p>
+    <p>Molestiae atque voluptate a voluptatibus accusantium repudiandae officia, tenetur nesciunt porro ullam deserunt aperiam. Repellat voluptas autem nisi laudantium quos, porro consequatur et quaerat tempora dolorem vitae iusto at minima!
+    </p>
+    <p>Quo hic labore dolorem quibusdam aperiam molestias minus, asperiores voluptatibus cumque totam! Asperiores itaque recusandae facere eaque amet id, modi vitae, consequuntur quia ut veritatis laborum voluptatibus animi dolores. Delectus.
+    </p>
+    <!--- Scripts -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div + p').css('border','1px solid red');
+
+            $('div ~ p').css('background-color','yellow');
+        });//on document ready
+    </script>    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+
+</head>
+<body>
+    <div id="heading1"></div>
+    <div id="heading2"></div>
+    <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste iure, expedita necessitatibus voluptatem eius officia nulla ut, ad harum voluptatum aliquid, quasi nemo architecto quaerat eveniet nobis voluptate sequi temporibus.
+    </div>
+    <!--- Scripts -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#heading1').html('<p>Lorem <em>ipsum dolor</em> sit amet, <strong>consectetur</strong> adipisicing elit.</p>');
+            $('#heading2').text('<p>Lorem <em>ipsum dolor</em> sit amet, <strong>consectetur</strong> adipisicing elit.</p>');
+
+            $('div')
+                .prepend('<span>Content:</span>')
+                .append('<a href="#">Read More...</a>')
+                .before('<hr />')
+                .after('<hr />');
+
+            
+        });//on document ready
+    </script>    
+</body>
+</html>
