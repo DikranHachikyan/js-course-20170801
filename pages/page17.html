@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script type="text/javascript">
+        
+    </script>
+    <style>
+        ul li+li {
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="gallery">
+        <li><img src="../pics-large/pic1-320x240.jpg" alt=""></li>
+        <li><img src="../pics-large/pic2-320x240.jpg" alt=""></li>
+        <li><img src="../pics-large/pic3-320x240.jpg" alt=""></li>
+        <li><img src="../pics-large/pic4-320x240.jpg" alt=""></li>
+        <li><img src="../pics-large/pic5-320x240.jpg" alt=""></li>
+    </ul>
+    <div>
+        <input type="button" id="prv" value="Prev">
+        <input type="button" id="nxt" value="Next">
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#nxt').click(function(evt){
+                $('#gallery li:first-child').appendTo( $('#gallery'));
+            });//on button next clicked
+
+            $('#prv').click(function(evt){
+                $('#gallery li:last-child').prependTo( $('#gallery'));
+            });//on button next clicked
+        });//on document ready
+    </script>   
+</body>
+</html>
