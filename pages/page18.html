@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script type="text/javascript">
+        
+    </script>
+    <style>
+        ul#gallery {
+            list-style: none;
+        }
+        ul#gallery li {
+            float: left;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../pics-large/pic1.jpg" alt="" id="large-image">
+    </div>
+    <ul id="gallery">
+        <li><img src="../pics-small/pic1.jpg" alt=""></li>
+        <li><img src="../pics-small/pic2.jpg" alt=""></li>
+        <li><img src="../pics-small/pic3.jpg" alt=""></li>
+        <li><img src="../pics-small/pic4.jpg" alt=""></li>
+        <li><img src="../pics-small/pic5.jpg" alt=""></li>
+    </ul>
+    
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           var defaultImage = '../pics-large/pic1.jpg';
+            
+           $('#gallery li img').mouseover(function(){
+                var imgSrc = $(this).attr('src');
+                imgSrc = imgSrc.replace('small','large');
+                $('#large-image').attr('src',imgSrc);
+                console.log('src:' + imgSrc);
+           })
+           .mouseout(function(){
+               $('#large-image').attr('src',defaultImage); 
+           });
+        });//on document ready
+    </script>   
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script type="text/javascript">
+        
+    </script>
+    <style>
+        ul#gallery {
+            list-style: none;
+        }
+        ul#gallery li {
+            float: left;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">
+        <img src="../pics-large/pic1-320x240.jpg" alt="" id="banner">
+        </a>
+    </div>
+    <button id="stop-btn">Stop</button>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           var images = ['pic1-320x240.jpg','pic2-320x240.jpg','pic3-320x240.jpg', 'pic4-320x240.jpg'];
+           var path = '../pics-large/';
+           var index = 0;
+
+           var intId = setInterval(function(){
+            index++;
+            if( index >= images.length){
+                index = 0;
+            }
+            $('#banner').attr('src',path + images[index]);
+           }, 2000);
+
+           $('#stop-btn').click(function(){
+                clearInterval(intId);
+           })
+        });//on document ready
+    </script>   
+</body>
+</html>
