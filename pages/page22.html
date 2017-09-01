@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 01</title>
+    <script type="text/javascript">
+        
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="gallery">
+       <h4>Millennium Monument</h4>
+       <a href="http://www.teara.govt.nz/en/video/44471/neil-dawsons-chalice-cathedral-square-christchurch">
+        <img src="../pics-large/chch-millennium-monument320x240.png" alt="Millennium Monument">
+       </a>
+       <p>
+        Neil Dawson's magnificent Chalice sculpture is located in Christchurch's Cathedral Square.Chalice celebrates the new millennium and the 150th Anniversary of the founding of Christchurch and Canterbury by the Canterbury Association. Chalice is a permanent sculpture with a primary hexagonal steel structure and a solid steel conical base. 18 metres high, 2 metres in diameter at ground level and 8.5 metres in diameter at the top, its shape mirrors the spire of Christchurch Cathedral.   
+       </p> 
+    </div>
+    <button id="next-btn">Next</button>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/images.js"></script>
+    <script>
+        $(document).ready(function(){
+            var index = 0;
+            var path = '../pics-large/';
+             var glr$ = $('#gallery');
+
+            $('#next-btn').click(function(){
+                index++;
+
+                if( index >= images.length){
+                    index = 0;
+                }
+
+                var item = images[index];
+                //console.log(item);
+                glr$.find('h4').html(item.title);
+                glr$.find('a').attr('href',item.url);
+                glr$.find('img').attr({ 
+                                        'src' : path + item.src ,
+                                        'alt' : item.alt
+                                      });
+                glr$.find('p').html(item.info);
+            });//on click button next  
+        });//on document ready
+    </script>   
+</body>
+</html>
